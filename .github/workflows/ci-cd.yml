@@ -61,8 +61,8 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/fastapi-bmi-app:latest
-          ${{ secrets.DOCKER_USERNAME }}/fastapi-bmi-app:${{ github.sha }}
+          ${{ secrets.DOCKER_USERNAME }}/fastapi-si-app:latest
+          ${{ secrets.DOCKER_USERNAME }}/fastapi-si-app:${{ github.sha }}
     
     - name: Image digest
       run: echo ${{ steps.build-and-publish.outputs.digest }}
